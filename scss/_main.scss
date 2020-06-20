@@ -1,0 +1,150 @@
+main {
+  .title {
+    @include title-properties;
+  }
+  .paragraph {
+    @include paragraph-properties;
+    text-align: justify;
+    font-size: 2.3rem;
+  }
+  .first-block {
+    padding-bottom: 5rem;
+    @include width;
+    .title-container {
+      width: fit-content;
+      .shape {
+        @include shape-props(#fed766);
+      }
+    }
+  }
+  .second-block {
+    @include block-props;
+    background-color: $background-color;
+    .text-block {
+      @include width;
+      .title-container {
+        width: 76%;
+        margin-right: 0;
+        margin-left: auto;
+        .title {
+          text-align: right;
+        }
+        .shape {
+          @include shape-props(#ffb800);
+        }
+      }
+    }
+  }
+  .third-block {
+    @include block-props;
+    @include width;
+    .title-container {
+      width: fit-content;
+      .shape {
+        @include shape-props(#f58736);
+      }
+    }
+  }
+  .product {
+    background-color: $background-color;
+    .content {
+      @include width;
+      @include block-props;
+      .product-title {
+        font-family: $text-font;
+        font-weight: 400;
+        color: $main-color;
+        font-size: 2.8rem;
+        text-align: center;
+      }
+      .product-image {
+        background-image: url("../assets/honeypots.svg");
+        width: 100%;
+        height: 30rem;
+        @include background-props(100%);
+      }
+      .product-payment-container {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        .payment-first-block {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          .buy-now-btn {
+            width: 19rem;
+            height: 7rem;
+            border-style: solid;
+            border-width: 9px;
+            border-image-source: linear-gradient(to top, #fece3f, #f58736);
+            border-image-slice: 1;
+            background-color: rgba(196, 196, 196, 0);
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          .price {
+            label {
+              font-family: $text-font;
+              font-size: 60px;
+              font-weight: bold;
+              color: #181c1d;
+            }
+          }
+        }
+        .payment-second-block {
+          ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            li {
+              width: 15%;
+              padding: 17px 7px;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .delivery-method {
+        margin-top: 40px;
+        font-size: 25px;
+        text-align: center;
+        color: #2d2d2d;
+        font-family: $text-font;
+      }
+    }
+  }
+  .where-to-buy {
+    position: relative;
+    @include block-props;
+    .honeycomb {
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      width: 45%;
+      top: 25%;
+      height: 43rem;
+      background-image: url("../assets/honeycomb.svg");
+      @include background-props(100%);
+    }
+    .content {
+      @include width;
+      .title {
+        text-align: left;
+        margin-bottom: 60px;
+      }
+      .shops {
+        li {
+          padding: 50px 10px;
+          a {
+            @include links;
+          }
+        }
+      }
+    }
+  }
+}

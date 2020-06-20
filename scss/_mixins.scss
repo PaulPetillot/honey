@@ -1,0 +1,52 @@
+@mixin title-properties {
+  font-family: $text-font;
+  font-weight: 500;
+  color: $main-color;
+  font-size: 3.3rem;
+  padding: 0 10px;
+}
+
+@mixin paragraph-properties {
+  font-family: $text-font;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.37;
+  letter-spacing: normal;
+  color: $main-color;
+  margin-top: 25px;
+}
+
+@mixin width {
+  width: 85%;
+  margin: 0 auto;
+}
+
+@mixin block-props {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+@mixin shape-props($shape-color) {
+  background-color: $shape-color;
+  height: 40px;
+  margin-top: -25px;
+  width: 100%;
+}
+
+@mixin links {
+  font-family: $text-font;
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2d2d2d;
+}
+
+@mixin background-props($size) {
+    background-size: $size;
+    background-position: center;
+    background-repeat: no-repeat;
+}
