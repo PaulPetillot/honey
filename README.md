@@ -4,7 +4,7 @@
 Honey uses a number of open source projects to work properly:
 
 * [HTML5] - HTML
-* [ASCSS] - awesome css pre-processor
+* [SCSS] - awesome css pre-processor
 
 ### Installation
 
@@ -17,3 +17,7 @@ $ cd honey
 $ npm install
 $ npm run dev
 ```
+
+Visit the website: 
+
+https://paulpetillot.github.io/honey/
